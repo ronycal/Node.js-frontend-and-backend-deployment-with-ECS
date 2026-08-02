@@ -18,20 +18,22 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get('/', (req, res) => {
-  console.log(`${new Date().toISOString()} GET`);
+// Main API endpoint
+app.get('/api', (req, res) => {
+  console.log(`${new Date().toISOString()} GET /api`);
 
   res.json({
     message: `SUCCESS ${ID}`
   });
 });
 
-app.get('/health', (req, res) => {
+// Health check endpoint
+app.get('/api/health', (req, res) => {
   res.status(200).json({
     status: 'healthy'
   });
 });
 
 app.listen(PORT, () => {
-  console.log(`Backend started on ${PORT}. Ctrl+C to exit`);
+  console.log(`Backend started on port ${PORT}. Ctrl+C to exit`);
 });
