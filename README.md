@@ -1,4 +1,4 @@
-# Overview
+# DevOps - Node.js frontend & backend deployment with ECS
 This repository contains a React frontend, and an Express backend that the frontend connects to.
 
 # Objective
